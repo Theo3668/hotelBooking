@@ -1,0 +1,75 @@
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #A8A8A8;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+
+/* Side navigation links */
+
+.sidenav a {
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+
+/* Change color on hover */
+
+.sidenav a:hover {
+    background-color: aqua;
+    color: black;
+}
+
+
+/* booking button */
+
+.sizeWidth {
+    width: 180px;
+    font-size: 15px;
+}
+
+.colorbtn {
+    background-color: aqua; //rgb(138, 204, 138);
+}
+
+.colorbtn:hover {
+    background-color: rgb(13, 160, 160); //rgb(138, 204, 138);
+}
+
+
+/* Responsive layout */
+
+@media screen and (max-width: 800px) {
+    .respScreen {
+        flex: 50%;
+        max-width: 50%;
+        width: 260px;
+        background-size: contain;
+    }
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .respScreen {
+        flex: 100%;
+        max-width: 100%;
+        background-size: contain;
+        width: 325px;
+        height: 100%px;
+        position: fixed;
+    }
+    .navbar-brand {
+        visibility: hidden;
+    }
+}

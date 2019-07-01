@@ -1,0 +1,51 @@
+<div class="container master">
+    <!-- Social form -->
+    <form action="/action_page.php">
+        <div class="row contactH2">
+            <h2 style="text-align:center">Check out our social media pages or send us your message</h2>
+            <div class="vl">
+                <span class="vl-innertext">or</span>
+            </div>
+
+            <div class="col">
+                <a href="#" class="fb btn">
+                    <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                </a>
+                <a href="#" class="twitter btn">
+                    <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                </a>
+                <a href="#" class="google btn">
+                    <i class="fa fa-google fa-fw"></i> Login with Google+
+                </a>
+            </div>
+
+            <!-- Send us your message -->
+            <div class="col">
+                <div class="container">
+                    <form action="action_page.php">
+
+                        <label for="fname">Full Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Full name..">
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Your email..">
+
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                                <option value="south africa">South Africa</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa">USA</option>
+                              </select>
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit" (click)="onBtnSubmit()">
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

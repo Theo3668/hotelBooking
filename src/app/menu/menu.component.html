@@ -1,0 +1,36 @@
+<div class="sidenav respScreen">
+    <nav class="w3-sidebar w3-light-grey w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
+        <div class="w3-container w3-display-container w3-padding-16">
+            <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-transparent w3-display-topright"></i>
+            <h3>Rental</h3>
+            <h3>from R250</h3>
+            <h6>per night</h6>
+            <hr>
+            <form action="/action_page.php" target="_blank">
+                <p><label><i class="fa fa-bed"></i> Room Type</label></p>
+                <select class="w3-input w3-border sizeWidth" type="text" placeholder="Room type" name="roomType" [(ngModel)]="roomType" required>
+                        <option value="Single">Single</option>
+                        <option value="Double">Double</option>
+                        <option value="Family Room">Family Room</option>
+                    </select>
+                <p><label><i class="fa fa-calendar-check-o"></i> Check In</label></p>
+                <input class="w3-input w3-border sizeWidth" type="date" placeholder="DD MM YYYY" name="CheckIn" [(ngModel)]="CheckIn" required>
+                <p><label><i class="fa fa-calendar-o"></i> Check Out</label></p>
+                <input class="w3-input w3-border sizeWidth" type="date" placeholder="DD MM YYYY" name="CheckOut" [(ngModel)]="CheckOut" required>
+                <p><label><i class="fa fa-male"></i> Adults</label></p>
+                <input class="w3-input w3-border sizeWidth" type="number" value="1" name="Adults" min="1" max="6" [(ngModel)]="Adults" required>
+                <p><label><i class="fa fa-child"></i> Kids</label></p>
+                <input class="w3-input w3-border sizeWidth" type="number" value="0" name="Kids" min="0" max="6" [(ngModel)]="Kids" required>
+                <p><button class="w3-button w3-block w3-green w3-left-align sizeWidth sizeWidth colorbtn" type="button" (click)="onBook()"><i class="fa fa-search"></i> Make Booking</button></p>
+            </form>
+        </div>
+        <ul>
+            <li class="navbar-brand" *ngFor="let item of navArray" (click)="onNavigate(item)">
+                <a class="nav-link"> {{item.name}}</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<router-outlet>
+</router-outlet>

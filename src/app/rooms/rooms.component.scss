@@ -1,0 +1,107 @@
+/* Component content to appear on the right */
+
+.master {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+// content
+.startH2 {
+    text-shadow: 2px 2px 5px rgb(204, 90, 90);
+    text-align: center;
+    font-family: cursive;
+}
+
+.amenH4 {
+    text-shadow: 2px 2px 5px rgb(204, 90, 90); //rgb(10, 240, 190);
+    font-family: cursive;
+}
+
+
+/* Photo Grid */
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin-left: 200px;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px none black;
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+
+@media screen and (max-width: 800px) {
+    .master {
+        flex: 50%;
+        max-width: 50%;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .master {
+        flex: auto;
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        visibility: hidden;
+    }
+    .imgGrid {
+        display: none;
+        flex-wrap: wrap;
+        padding: 0px;
+        margin-left: 0px;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 50px 50px;
+    }
+    .photoGrid {
+        width: 100%;
+        padding: 0px;
+        flex-wrap: nowrap;
+        padding: 0 4px;
+        margin-left: 0px;
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 50px 50px;
+    }
+    .column {
+        flex: auto;
+        max-width: 0%;
+        padding: 0 px;
+        background-size: contain;
+    }
+}
