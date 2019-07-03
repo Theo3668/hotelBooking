@@ -13,6 +13,7 @@ export class FormComponent implements OnInit {
   @Input() CheckOut
   @Input() Adults
   @Input() Kids
+
   constructor(private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit() {
